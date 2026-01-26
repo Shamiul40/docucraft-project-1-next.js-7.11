@@ -20,7 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  getDocuments()
+ const allDocuments = getDocuments();
+ console.log(allDocuments)
 
   return (
     <html lang="en">
