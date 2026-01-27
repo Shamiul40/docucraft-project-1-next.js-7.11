@@ -6,7 +6,17 @@ import SideBar from "./SideBar";
 export default function Header({ docs }) {
   
 
+  const root = docs.filter((doc) => !doc.parent);
   
+
+  const nonRoot = Object.groupBy(
+    docs.filter((doc) => doc.parent),
+    (doc) => {
+      const parent = doc.parent;
+
+      return parent;
+    },
+  );
 
 
   return (
