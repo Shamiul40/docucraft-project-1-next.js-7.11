@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 
  const allDocuments = getDocuments();
- console.log(allDocuments)
+ 
 
   return (
     <html lang="en">
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
        <div className="bg-white text-black min-h-screen">
 
           <div>
-            <Header></Header>
+            <Header docs={allDocuments}></Header>
           </div>
 
            {children}
