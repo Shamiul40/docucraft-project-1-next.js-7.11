@@ -5,7 +5,7 @@ import React from 'react'
 export default function Landing() {
   return (
      <article>
-      <div className="relative">
+      <div className="relative ">
         <div className=" relative mx-auto px-4 ">
           <div className="mx-auto grid max-w-[40rem] grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-5">
             <div className="flex flex-col lg:pb-6 lg:col-span-2 justify-center">
