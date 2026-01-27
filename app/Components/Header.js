@@ -4,10 +4,10 @@ import Search from "./Search";
 import SideBar from "./SideBar";
 
 export default function Header({ docs }) {
-  // console.log(docs)
+  
 
   const root = docs.filter((doc) => !doc.parent);
-  // console.log("there is root console", root)
+  
 
   const nonRoot = Object.groupBy(
     docs.filter((doc) => doc.parent),
