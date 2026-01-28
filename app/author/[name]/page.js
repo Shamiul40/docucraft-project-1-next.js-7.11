@@ -1,9 +1,11 @@
-import React from 'react'
 
-export default function AuthorPage({params : {name}}) {
+export default async function AuthorPage({params}) {
+
+    const {name} = await params
+
   return (
     <div>
-      <h1>{name}</h1>
+      <h1 className='text-3xl '>{name}</h1>
     </div>
   )
 }
