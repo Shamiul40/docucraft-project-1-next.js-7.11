@@ -28,11 +28,9 @@ export default async function ContentIdPage({ params }) {
           ))}
         </div>
       </div>
-      <div 
-        dangerouslySetInnerHTML={{__html :getAllDocumentsContent.contentHtml}}
-        >
-       
-      </div>
+      <div
+        dangerouslySetInnerHTML={{ __html: getAllDocumentsContent.contentHtml }}
+      ></div>
     </div>
   );
 }
