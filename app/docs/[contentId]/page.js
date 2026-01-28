@@ -1,7 +1,7 @@
 
 
-export default function ContentIdPage({ params }) {
-  const contentId = params?.contentId ?? "";
+export default async function ContentIdPage({ params }) {
+  const { contentId } = await params;
 
   return (
     <div>
