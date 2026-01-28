@@ -1,10 +1,12 @@
-import React from 'react'
 
-export default function ContentIdPage({params : {contentId}}) {
+
+export default function ContentIdPage({ params }) {
+  const contentId = params?.contentId ?? "";
+
   return (
     <div>
-        <p>content : {contentId}</p>
-      {contentId}
+      <p>content: {contentId || "(no contentId)"}</p>
+      <div>{contentId}</div>
     </div>
-  )
+  );
 }
