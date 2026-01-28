@@ -9,26 +9,26 @@ export default async function ContentIdPage({ params }) {
 
   return (
     <div>
-      <h1>introduction</h1>
+      <h1 className="my-2 text-2xl">introduction</h1>
       <div>
         <p>
-          published on : {getAllDocumentsContent.date} by:{" "}
-          <Link href={`/author/${getAllDocumentsContent.author}`}>
+          published on : {getAllDocumentsContent.date} by {" "}
+          <Link className="text-green-600 font-bold" href={`/author/${getAllDocumentsContent.author}`}>
             {getAllDocumentsContent.author}
           </Link>{" "}
           under the{" "}
-          <Link href={`/category/${getAllDocumentsContent.category}`}>
+          <Link className="text-green-600 font-bold" href={`/category/${getAllDocumentsContent.category}`}>
             {getAllDocumentsContent.category}
-          </Link>{" "}
+          </Link> {" "}
           category
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 my-2 text-green-600">
           {getAllDocumentsContent.tags.map((tag) => (
             <Tag key={tag} tag={tag}></Tag>
           ))}
         </div>
       </div>
-      <div
+      <div className="my-2 flex flex-col gap-2 "
         dangerouslySetInnerHTML={{ __html: getAllDocumentsContent.contentHtml }}
       ></div>
     </div>
