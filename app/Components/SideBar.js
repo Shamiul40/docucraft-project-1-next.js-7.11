@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
+import { getDocumentsByAuthor, getDocumentsByCategory, getDocumentsByTag } from "../utils/docs-utils";
 
 const Sidebar = ({ docs }) => {
 
@@ -9,12 +10,27 @@ const Sidebar = ({ docs }) => {
 
     useEffect(()=>{
 
+      let matchedDocs = docs;
+
       if(pathName.includes("/tags")) {
+
        const tag= pathName.split("/") [2]
+
+       matchedDocs = getDocumentsByTag(docs, tag)
+
       } else if (pathName.includes("/author")) {
+
         const author = pathName.split("/") [2] 
+
+        matchedDocs = getDocumentsByAuthor(docs, author)
+
       } else if (pathName.includes("/category")) {
+
         const category = pathName.split("/") [2]
+
+        matchedDocs =getDocumentsByCategory(docs, category)
+
+
       }
 
     },[pathName])
