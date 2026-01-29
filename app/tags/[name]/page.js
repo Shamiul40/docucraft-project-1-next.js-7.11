@@ -6,6 +6,7 @@ export default async function TagPage({params}) {
   return (
     <div>
       <h1>{name}</h1>
+      <p>a</p>
     </div>
   )
 }
